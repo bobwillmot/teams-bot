@@ -1,4 +1,6 @@
-# ADR-XXXX: Title
+# ADR-XXXX: Short Title
+
+File name: `0000-short-title.md`
 
 ## Status
 

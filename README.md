@@ -138,4 +138,10 @@ This repository tracks implementation history in Markdown:
 - Agent request transcripts live under `docs/agent-transcripts/` as dated logs.
 - Design decisions live under `docs/adr/` as ADR documents.
 
+File naming follows the local documentation convention:
+
+- Keep `README.md` in its conventional uppercase form.
+- Use lowercase hyphenated Markdown file names for ADRs and other support docs.
+- Name ADRs as `0001-short-title.md`, `0002-short-title.md`, and so on.
+
 When the project changes in a meaningful way, add a short transcript entry and create or update an ADR if the change affects architecture, tooling, deployment, or long-term maintenance.

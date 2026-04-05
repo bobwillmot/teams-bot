@@ -12,8 +12,9 @@ Create a new ADR when a change affects:
 
 Naming convention:
 
-- `0001-short-title.md`
-- `0002-short-title.md`
+- Keep the folder README as `README.md`.
+- Name ADR files with a zero-padded number and a lowercase hyphenated slug.
+- Examples: `0001-track-agent-work-in-repo.md`, `0002-align-project-tracking-with-personal-preferences.md`
 
 Recommended sections:
 
@@ -21,5 +22,7 @@ Recommended sections:
 - Context
 - Decision
 - Consequences
+
+Keep ADRs concise and focused on decisions with lasting technical impact.
 
 Use [adr-template.md](adr-template.md) as the starting point for new records.
