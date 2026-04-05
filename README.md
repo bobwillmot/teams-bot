@@ -18,6 +18,8 @@ Use it when you want a real Teams chat surface instead of channel-only webhook s
 - `teams-app-manifest/manifest.json`: minimal Teams app manifest scaffold for local development.
 - `teams-app-manifest/README.md`: packaging notes for the manifest scaffold.
 - `tests/test_app.py`: smoke test for the bot endpoint.
+- `docs/agent-transcripts/`: dated Markdown logs of agent requests and outcomes.
+- `docs/adr/`: architecture and design decision records for the project.
 
 ## Git
 
@@ -128,3 +130,12 @@ A starter manifest scaffold is included in `teams-app-manifest/manifest.json` wi
 - This is a bot example, not a webhook client and not a Graph channel-posting client.
 - Bots are the better fit for 1:1 chat, group chat, mentions, and interactive conversations.
 - If you only need simple unattended channel notifications, a webhook or workflow is usually simpler.
+
+## Project Tracking
+
+This repository tracks implementation history in Markdown:
+
+- Agent request transcripts live under `docs/agent-transcripts/` as dated logs.
+- Design decisions live under `docs/adr/` as ADR documents.
+
+When the project changes in a meaningful way, add a short transcript entry and create or update an ADR if the change affects architecture, tooling, deployment, or long-term maintenance.
