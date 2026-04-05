@@ -15,6 +15,9 @@ Use it when you want a real Teams chat surface instead of channel-only webhook s
 - `pyproject.toml`: project metadata and Python dependencies.
 - `app.py`: aiohttp entry point that hosts the bot endpoint.
 - `bots/echo_bot.py`: minimal bot behavior.
+- `teams-app-manifest/manifest.json`: minimal Teams app manifest scaffold for local development.
+- `teams-app-manifest/README.md`: packaging notes for the manifest scaffold.
+- `tests/test_app.py`: smoke test for the bot endpoint.
 
 ## Git
 
@@ -55,6 +58,8 @@ Set these values in `.env`:
 - `MicrosoftAppPassword`: the bot client secret. Leave blank only for Emulator-only local testing when you intentionally run without auth.
 - `PORT`: local HTTP port, default `3978`.
 
+The checked-in `.env.example` includes the same keys with brief usage comments.
+
 ## Run
 
 Start the bot server:
@@ -89,6 +94,12 @@ Useful messages to try:
 4. If you are running with auth enabled, provide the same app ID and password from `.env`.
 5. Send `help`, `hello`, and a few free-form messages to verify the responses.
 
+You can also run the automated smoke test:
+
+```bash
+.venv/bin/python -m unittest tests.test_app
+```
+
 ### Test In Teams During Local Development
 
 1. Start the bot locally with `python app.py`.
@@ -108,7 +119,9 @@ Typical path:
 4. Create a Teams app manifest that references the same bot app ID.
 5. Upload the app manifest to Teams and start a chat.
 
-This sample does not include a Teams manifest because bot IDs, domains, and package metadata are deployment-specific.
+This sample does not include a ready-to-sideload Teams package because bot IDs, domains, icons, and package metadata are deployment-specific.
+
+A starter manifest scaffold is included in `teams-app-manifest/manifest.json` with placeholder values you should replace before sideloading.
 
 ## Notes
 

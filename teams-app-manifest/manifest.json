@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "1.0.0",
+  "id": "11111111-1111-1111-1111-111111111111",
+  "packageName": "com.example.teams-bot",
+  "developer": {
+    "name": "Replace With Your Name Or Org",
+    "websiteUrl": "https://example.com",
+    "privacyUrl": "https://example.com/privacy",
+    "termsOfUseUrl": "https://example.com/terms"
+  },
+  "name": {
+    "short": "Teams Bot Example",
+    "full": "Teams Bot Example Local Development"
+  },
+  "description": {
+    "short": "Local development scaffold for the Teams bot example.",
+    "full": "Sideloadable Microsoft Teams app manifest for the local development bot example in this repository."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#005A9C",
+  "bots": [
+    {
+      "botId": "00000000-0000-0000-0000-000000000000",
+      "scopes": [
+        "personal",
+        "team",
+        "groupchat"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal",
+            "team",
+            "groupchat"
+          ],
+          "commands": [
+            {
+              "title": "help",
+              "description": "Show the available bot commands."
+            },
+            {
+              "title": "hello",
+              "description": "Return a simple greeting from the bot."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "your-public-host.example.com"
+  ]
+}
