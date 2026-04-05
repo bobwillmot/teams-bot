@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teams-bot-example"
+version = "0.1.0"
+description = "Minimal Microsoft Teams bot example in Python."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "aiohttp>=3.9,<4",
+  "botbuilder-core>=4.15,<5",
+  "botbuilder-integration-aiohttp>=4.15,<5",
+  "python-dotenv>=1.0,<2"
+]
+
+[tool.setuptools]
+packages = ["bots"]
