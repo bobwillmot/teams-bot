@@ -1,6 +1,6 @@
 # Teams Bot Example
 
-Minimal Python example of a Microsoft Teams bot using the Bot Framework SDK and `aiohttp`.
+Minimal Python example of a Microsoft Teams bot using the Bot Framework SDK and `aiohttp`. The bot echoes text, strips Teams mention markup, and supports simple `help` and greeting commands.
 
 ## What This Is
 
@@ -15,6 +15,16 @@ Use it when you want a real Teams chat surface instead of channel-only webhook s
 - `pyproject.toml`: project metadata and Python dependencies.
 - `app.py`: aiohttp entry point that hosts the bot endpoint.
 - `bots/echo_bot.py`: minimal bot behavior.
+
+## Git
+
+This project is a Git repository with `main` tracking `origin/main`.
+
+Configured remote:
+
+```text
+origin  https://github.com/bobwillmot/teams-bot.git
+```
 
 ## Prerequisites
 
@@ -64,6 +74,29 @@ http://localhost:3978/api/messages
 You can test the bot with Bot Framework Emulator against `http://localhost:3978/api/messages`.
 
 If your bot registration requires auth, enter the same app ID and password in the Emulator.
+
+Useful messages to try:
+
+- `help`: shows the supported commands.
+- `hello`: returns a greeting.
+- any other text: the bot echoes it back.
+
+### Test In Emulator
+
+1. Start the bot with `python app.py`.
+2. Open Bot Framework Emulator.
+3. Connect to `http://localhost:3978/api/messages`.
+4. If you are running with auth enabled, provide the same app ID and password from `.env`.
+5. Send `help`, `hello`, and a few free-form messages to verify the responses.
+
+### Test In Teams During Local Development
+
+1. Start the bot locally with `python app.py`.
+2. Expose `http://localhost:3978` through an HTTPS tunnel such as dev tunnels or ngrok.
+3. Update the bot registration messaging endpoint to `https://<your-public-host>/api/messages`.
+4. Create or update a Teams app manifest that references the same bot app ID.
+5. Upload the manifest to Teams and open a 1:1 chat with the bot.
+6. Mention the bot in Teams and send `help` or another message to confirm the bot strips the mention text before replying.
 
 ## Use In Teams
 
