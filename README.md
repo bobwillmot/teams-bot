@@ -1,4 +1,4 @@
-# Teams Bot Example
+# Teams Bot
 
 Minimal Python example of a Microsoft Teams bot using the Bot Framework SDK and `aiohttp`. The bot echoes text, strips Teams mention markup, and supports simple `help` and greeting commands.
 
